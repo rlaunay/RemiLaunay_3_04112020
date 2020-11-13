@@ -1,24 +1,23 @@
 {
-  "name": "RemiLaunay_3_04112020",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "watch": "node-sass styles/scss/main.scss styles/css/style.css -w",
-    "build": "node-sass styles/scss/main.scss styles/css/style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rlaunay/RemiLaunay_3_04112020.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rlaunay/RemiLaunay_3_04112020/issues"
-  },
-  "homepage": "https://github.com/rlaunay/RemiLaunay_3_04112020#readme",
-  "dependencies": {
-    "node-sass": "^5.0.0"
-  }
+	"name": "RemiLaunay_3_04112020",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"watch": "sass --watch ./styles/scss/main.scss ./styles/css/style.css",
+		"build": "sass ./styles/scss/main.scss ./styles/css/style.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/rlaunay/RemiLaunay_3_04112020.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/rlaunay/RemiLaunay_3_04112020/issues"
+	},
+	"homepage": "https://github.com/rlaunay/RemiLaunay_3_04112020#readme",
+	"dependencies": {
+		"node-sass": "^5.0.0"
+	}
 }

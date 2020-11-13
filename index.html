@@ -1,18 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmyfood</title>
-    <link rel="stylesheet" href="styles/css/style.css">
-</head>
-<body>
-    <nav>
-        <a href="/pages/a_la_francaise.html">À la Française</a>
-        <a href="/pages/la_note_enchantee.html">La note enchantée</a>
-        <a href="/pages/la_palette_du_gout.html">La palette du goût</a>
-        <a href="/pages/le_delice_des_sens.html">Le délice des sens</a>
-    </nav>
-    <h1>Work in progress ...</h1>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ohmyfood</title>
+		<link rel="stylesheet" href="styles/css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/2c740296bb.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<header class="header">
+			<img
+				class="header__logo"
+				src="./images/logo/ohmyfood@2x.svg"
+				alt="logo"
+			/>
+		</header>
+		<section class="localisation">
+			<span>
+				<i class="fas fa-map-marker-alt"></i>
+			</span>
+			<p>Paris, Belleville</p>
+		</section>
+		<section class="explorer">
+			<h2>Réservez le menu qui vous convient</h2>
+			<h3 class="sub-title">
+				Découvrez des restaurants d'exception, sélectionnés par nos
+				soins.
+			</h3>
+			<button class="btn">Explorer nos restaurants</button>
+		</section>
+		<section class="fonctionnement">
+			<h2 class="fonctionnement__titre">Fonctionnement</h2>
+			<ol class="fonctionnement__step">
+				<li class="fonctionnement__step--items">
+					<span class="fonctionnement__step--items-logo">
+						<i class="fas fa-mobile-alt"></i>
+					</span>
+					<p>Choisissez un restaurant</p>
+				</li>
+				<li class="fonctionnement__step--items">
+					<span class="fonctionnement__step--items-logo">
+						<i class="fas fa-list"></i>
+					</span>
+					<p>Composez votre menu</p>
+				</li>
+				<li class="fonctionnement__step--items">
+					<span class="fonctionnement__step--items-logo">
+						<i class="fas fa-store"></i>
+					</span>
+					<p>Dégustez au restaurant</p>
+				</li>
+			</ol>
+		</section>
+		<section class="restaurant">
+			<h2 class="restaurant__titre">Restaurants</h2>
+			<nav class="restaurant__nav">
+				<div>
+					<a href="/pages/a_la_francaise.html">À la Française</a>
+				</div>
+				<div>
+					<a href="/pages/la_note_enchantee.html"
+						>La note enchantée</a
+					>
+				</div>
+				<div>
+					<a href="/pages/la_palette_du_gout.html"
+						>La palette du goût</a
+					>
+				</div>
+				<div>
+					<a href="/pages/le_delice_des_sens.html"
+						>Le délice des sens</a
+					>
+				</div>
+			</nav>
+		</section>
+		<footer class="footer">
+			<h2 class="footer__titre">ohmyfood</h2>
+			<ul class="footer__list">
+				<li class="footer__list-item">
+					<a href="/">Proposer un restaurant</a>
+				</li>
+				<li class="footer__list-item">
+					<a href="/">Devenir partenaire</a>
+				</li>
+				<li class="footer__list-item">
+					<a href="/">Mentions légales</a>
+				</li>
+				<li class="footer__list-item"><a href="/">Contact</a></li>
+			</ul>
+		</footer>
+	</body>
 </html>
