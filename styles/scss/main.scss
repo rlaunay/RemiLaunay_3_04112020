@@ -1,0 +1,24 @@
+// utils
+@import './utils/variables';
+@import './utils/functions';
+@import 'utils/mixins';
+
+// base
+@import './base/base';
+@import './base/typography';
+@import './base/animations';
+
+//components
+@import './components/button';
+
+// layout
+@import './layout/header';
+@import './layout/page-restaurants';
+@import 'layout/footer';
+
+// pages
+@import './pages/accueil';
+@import './pages/a_la_francaise';
+@import './pages/la_note_enchantee';
+@import './pages/la_palette_du_gout';
+@import './pages/le_delice_des_sens';

@@ -1,0 +1,31 @@
+.footer {
+	background-color: $color-grey-dark;
+	color: $color-white;
+
+	padding: 20px;
+
+	&__titre {
+		font-weight: 400;
+		font-size: 24px;
+	}
+
+	&__list {
+		list-style: none;
+		padding: 0;
+
+		&-item {
+			margin: 10px 0;
+
+			& i {
+				height: 25px;
+				width: 25px;
+			}
+
+			& a {
+				text-decoration: none;
+				color: inherit;
+				font-weight: 400;
+			}
+		}
+	}
+}
