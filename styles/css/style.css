@@ -282,13 +282,13 @@ h4 {
   background: url("./../../../../images/restaurants/la_palette_du_gout.jpg");
 }
 .restaurant__link .img--la_note_enchantee {
-  background: url("./../../../../images/restaurants/la_note_enchantee.jpg");
+  background: url("/images/restaurants/la_note_enchantee.jpg");
 }
 .restaurant__link .img--a_la_francaise {
-  background: url("./../../../../images/restaurants/a_la_francaise.jpg");
+  background: url("/images/restaurants/a_la_francaise.jpg");
 }
 .restaurant__link .img--le_delice_des_sens {
-  background: url("./../../../../images/restaurants/le_delice_des_sens.jpg");
+  background: url("/images/restaurants/le_delice_des_sens.jpg");
 }
 .restaurant__link .img {
   background-position: center;
