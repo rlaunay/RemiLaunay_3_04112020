@@ -1,6 +1,6 @@
 .localisation {
 	height: 50px;
-	background-color: $color-grey-light2;
+	background-color: $color-grey-light;
 
 	display: flex;
 	justify-content: center;
@@ -16,7 +16,7 @@
 
 .explorer {
 	padding: 2rem;
-	background-color: $color-grey-light;
+	background-color: $color-grey-very-light;
 	height: 30rem;
 	display: flex;
 	flex-direction: column;
@@ -44,7 +44,7 @@
 		&--items {
 			position: relative;
 			counter-increment: item;
-			background-color: $color-grey-light;
+			background-color: $color-grey-very-light;
 			border-radius: 20px;
 			box-shadow: 0px 2px 10px rgba($color-black, 0.2);
 			padding: 1rem;
@@ -54,7 +54,7 @@
 
 			&-logo {
 				margin: 0 2.5rem;
-				color: $color-grey-light;
+				color: $color-grey-very-light;
 			}
 
 			&:before {
@@ -78,7 +78,7 @@
 
 .restaurant {
 	padding: 3rem;
-	background-color: $color-grey-light;
+	background-color: $color-grey-very-light;
 
 	&__link {
 		margin: 0 10px;
