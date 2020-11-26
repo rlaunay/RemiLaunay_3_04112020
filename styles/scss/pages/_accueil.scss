@@ -103,6 +103,10 @@
 
 				&--icon {
 					font-size: 28px;
+
+					&--icon:after {
+						content: '';
+					}
 				}
 			}
 		}

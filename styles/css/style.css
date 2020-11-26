@@ -278,6 +278,9 @@ h4 {
 .restaurant__link .card__description--icon {
   font-size: 28px;
 }
+.restaurant__link .card__description--icon--icon:after {
+  content: "";
+}
 .restaurant__link .img--la_palette_du_gout {
   background: url("../../images/restaurants/la_palette_du_gout.jpg");
 }
