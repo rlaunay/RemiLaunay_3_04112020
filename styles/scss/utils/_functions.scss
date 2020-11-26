@@ -1,0 +1,5 @@
+@for $i from 1 through 4 {
+	.menu__section--list li:nth-child(#{$i}n) {
+		animation-delay: #{$i * 0.2}s;
+	}
+}
