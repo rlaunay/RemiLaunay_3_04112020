@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+.menu__section--list li:nth-child(1n) {
+  animation-delay: 0.2s;
+}
+
+.menu__section--list li:nth-child(2n) {
+  animation-delay: 0.4s;
+}
+
+.menu__section--list li:nth-child(3n) {
+  animation-delay: 0.6s;
+}
+
+.menu__section--list li:nth-child(4n) {
+  animation-delay: 0.8s;
+}
+
 html {
   font-size: 62.5%;
   /* 1 rem = 10px */
@@ -37,11 +53,58 @@ h3 {
 }
 
 h4 {
+  font-size: 14px;
   font-weight: 700;
   color: black;
   margin: 0;
 }
 
+@-webkit-keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+@keyframes hide {
+  to {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}
+@keyframes fadeTranslateEntry {
+  0% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .btn {
   border: none;
   outline: none;
@@ -54,6 +117,64 @@ h4 {
 }
 .btn--restaurant {
   margin: 50px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: hide 1s forwards 1s;
+  animation: hide 0.2s forwards 1s;
+}
+.backdrop .loader {
+  width: 110px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.backdrop .loader span {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 30px;
+  height: 100px;
+  background-color: #99e2d0;
+  -webkit-animation: grow 1s linear -0.66s infinite;
+  animation: grow 1s linear -0.66s infinite;
+}
+.backdrop .loader::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 100px;
+  background-color: #99e2d0;
+  -webkit-animation: grow 1s linear infinite;
+  animation: grow 1s linear infinite;
+}
+.backdrop .loader::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 30px;
+  height: 100px;
+  background-color: #99e2d0;
+  -webkit-animation: grow 1s linear -0.33s infinite;
+  animation: grow 1s linear -0.33s infinite;
 }
 
 .header {
@@ -137,21 +258,68 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
   margin: 15px 0;
   padding: 10px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-weight: 700;
+  opacity: 0;
+  animation: fadeTranslateEntry 0.2s linear;
+  animation-fill-mode: forwards;
+  overflow: hidden;
 }
 .menu__section--list-item .desc {
   width: 80%;
+  margin-right: auto;
 }
 .menu__section--list-item p {
   margin: 0;
   margin-top: 5px;
   font-weight: 400;
   font-size: 14px;
+}
+.menu__section--list-item .price {
+  transition: 0.5s;
+}
+.menu__section--list-item .selected-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #99e2d0;
+  transition: 0.5s;
+  z-index: 1000;
+}
+.menu__section--list-item .selected-item i {
+  transform: translateX(20px);
+  transition: 0.5s;
+}
+.menu__section--list-item:hover .desc {
+  width: 70%;
+}
+.menu__section--list-item:hover p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.menu__section--list-item:hover .price {
+  margin-right: 60px;
+}
+.menu__section--list-item:hover .selected-item {
+  width: 60px;
+}
+.menu__section--list-item:hover .selected-item i {
+  transform: translateX(0) rotate(360deg);
 }
 
 .footer {
@@ -256,44 +424,66 @@ h4 {
   background-color: #f6f6f6;
 }
 .restaurant__link {
-  margin: 0 10px;
   text-decoration: none;
   color: black;
 }
-.restaurant__link .card {
-  margin: 0;
+.restaurant .card {
+  margin: 10px;
   background-color: white;
   border-radius: 15px;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
-.restaurant__link .card__description {
+.restaurant .card__description {
   display: flex;
   justify-content: space-between;
   padding: 15px 10px;
 }
-.restaurant__link .card__description p {
+.restaurant .card__description p {
   margin: 5px 0;
 }
-.restaurant__link .card__description--icon {
+.restaurant .card__description--icon {
+  height: 28px;
+  width: 28px;
   font-size: 28px;
+  position: relative;
+  z-index: 1000;
 }
-.restaurant__link .card__description--icon--icon:after {
-  content: "";
+.restaurant .card__description--icon i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: transform 0.5s;
 }
-.restaurant__link .img--la_palette_du_gout {
+.restaurant .card__description--icon .background {
+  z-index: 105;
+  transform: scale(0);
+  background: linear-gradient(to bottom right, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+.restaurant .card__description--icon:hover i:first-child {
+  opacity: 0;
+}
+.restaurant .card__description--icon:hover .background {
+  transform: scale(1);
+}
+.restaurant .img--la_palette_du_gout {
   background: url("../../images/restaurants/la_palette_du_gout.jpg");
 }
-.restaurant__link .img--la_note_enchantee {
+.restaurant .img--la_note_enchantee {
   background: url("../../images/restaurants/la_note_enchantee.jpg");
 }
-.restaurant__link .img--a_la_francaise {
+.restaurant .img--a_la_francaise {
   background: url("../../images/restaurants/a_la_francaise.jpg");
 }
-.restaurant__link .img--le_delice_des_sens {
+.restaurant .img--le_delice_des_sens {
   background: url("../../images/restaurants/le_delice_des_sens.jpg");
 }
-.restaurant__link .img {
+.restaurant .img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

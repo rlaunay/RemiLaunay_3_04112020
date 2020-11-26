@@ -75,6 +75,7 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: flex-end;
+				position: relative;
 
 				margin: 15px 0;
 				padding: 10px;
@@ -82,9 +83,14 @@
 				border-radius: 10px;
 				box-shadow: 0 4px 8px rgba($color-black, 0.2);
 				font-weight: 700;
+				opacity: 0;
+				animation: fadeTranslateEntry 0.2s linear;
+				animation-fill-mode: forwards;
+				overflow: hidden;
 
 				& .desc {
 					width: 80%;
+					margin-right: auto;
 				}
 
 				& p {
@@ -92,6 +98,57 @@
 					margin-top: 5px;
 					font-weight: 400;
 					font-size: 14px;
+				}
+
+				& .price {
+					transition: 0.5s;
+				}
+
+				& .selected-item {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: 0;
+					width: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 24px;
+					color: white;
+					border-bottom-right-radius: 10px;
+					border-top-right-radius: 10px;
+					background-color: #99e2d0;
+					transition: 0.5s;
+					z-index: 1000;
+
+					& i {
+						transform: translateX(20px);
+						transition: 0.5s;
+					}
+				}
+
+				&:hover {
+					& .desc {
+						width: 70%;
+					}
+
+					& p {
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+					}
+
+					& .price {
+						margin-right: 60px;
+					}
+
+					& .selected-item {
+						width: 60px;
+
+						& i {
+							transform: translateX(0) rotate(360deg);
+						}
+					}
 				}
 			}
 		}
