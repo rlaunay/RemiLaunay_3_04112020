@@ -28,6 +28,13 @@ body {
   flex-direction: column;
 }
 
+@media (min-width: 1024px) {
+  body {
+    margin: auto;
+    width: 70%;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.6);
+  }
+}
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
@@ -114,9 +121,15 @@ h4 {
   color: white;
   background: linear-gradient(to bottom right, #ff79da 0%, #9356dc 100%);
   font-size: 20px;
+  transition: 0.5s;
 }
 .btn--restaurant {
   margin: 50px;
+}
+
+.btn:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
 }
 
 .backdrop {
@@ -322,6 +335,19 @@ h4 {
   transform: translateX(0) rotate(360deg);
 }
 
+@media (min-width: 1400px) {
+  .menu__section--titre {
+    margin: 30px 0;
+  }
+  .menu__section--list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 10px;
+  }
+  .menu__section--list-item {
+    margin: 0;
+  }
+}
 .footer {
   background-color: #353535;
   color: white;
@@ -348,6 +374,24 @@ h4 {
   font-weight: 400;
 }
 
+@media (min-width: 640px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1000px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .footer__list {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+  }
+}
 .localisation {
   height: 50px;
   background-color: #eaeaea;
@@ -374,7 +418,6 @@ h4 {
 
 .fonctionnement {
   padding: 3rem;
-  height: 40rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -395,13 +438,17 @@ h4 {
   border-radius: 20px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   padding: 1rem;
+  margin: 20px 0;
   font-weight: bold;
   display: flex;
   align-items: center;
 }
 .fonctionnement__step--items-logo {
-  margin: 0 2.5rem;
-  color: #f6f6f6;
+  margin: 0 3rem;
+}
+.fonctionnement__step--items-logo i {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.6);
 }
 .fonctionnement__step--items:before {
   position: absolute;
@@ -419,6 +466,18 @@ h4 {
   align-items: center;
 }
 
+@media (min-width: 1400px) {
+  .fonctionnement__step {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .fonctionnement__step--items {
+    flex-grow: 1;
+    margin: 20px;
+    height: 80px;
+  }
+}
 .restaurant {
   padding: 3rem;
   background-color: #f6f6f6;
@@ -490,6 +549,14 @@ h4 {
   width: 100%;
   height: 200px;
   overflow: hidden;
+}
+
+@media (min-width: 1400px) {
+  .restaurant__nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
