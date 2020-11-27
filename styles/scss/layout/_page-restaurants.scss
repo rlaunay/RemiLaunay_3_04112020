@@ -154,3 +154,22 @@
 		}
 	}
 }
+
+@media (min-width: 1400px) {
+	.menu {
+		&__section {
+			&--titre {
+				margin: 30px 0;
+			}
+
+			&--list {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+				grid-gap: 10px;
+				&-item {
+					margin: 0;
+				}
+			}
+		}
+	}
+}

@@ -10,3 +10,11 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
+@media (min-width: 1024px) {
+	body {
+		margin: auto;
+		width: 70%;
+		box-shadow: 0px 4px 14px rgba($color-black, 0.6);
+	}
+}
