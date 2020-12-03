@@ -1,34 +1,40 @@
-@-webkit-keyframes grow {
+@-webkit-keyframes spin {
 	0% {
-		transform: scaleY(0);
-		opacity: 0;
-	}
-
-	50% {
-		transform: scaleY(1);
-		opacity: 1;
+		transorm: rotate(0deg);
 	}
 
 	100% {
-		transform: scaleY(0);
-		opacity: 0;
+		transform: rotate(360deg);
 	}
 }
 
-@keyframes grow {
+@keyframes spin {
 	0% {
-		transform: scaleY(0);
-		opacity: 0;
-	}
-
-	50% {
-		transform: scaleY(1);
-		opacity: 1;
+		transorm: rotate(0deg);
 	}
 
 	100% {
-		transform: scaleY(0);
-		opacity: 0;
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes spinreverse {
+	0% {
+		transorm: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes spinreverse {
+	0% {
+		transorm: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
 	}
 }
 
