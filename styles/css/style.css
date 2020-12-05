@@ -66,28 +66,12 @@ h4 {
   margin: 0;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    transorm: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   0% {
     transorm: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spinreverse {
-  0% {
-    transorm: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
   }
 }
 @keyframes spinreverse {
@@ -114,6 +98,14 @@ h4 {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes changeWidth {
+  0% {
+    width: 80%;
+  }
+  100% {
+    width: 70%;
   }
 }
 .btn {
@@ -147,7 +139,6 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: hide 1s forwards 3s;
   animation: hide 0.2s forwards 3s;
 }
 .backdrop .loader {
@@ -160,7 +151,6 @@ h4 {
   border: 12px solid transparent;
   border-top-color: #9356dc;
   border-bottom-color: #9356dc;
-  -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
 .backdrop .loader::after {
@@ -174,7 +164,6 @@ h4 {
   border: 12px solid transparent;
   border-top-color: rgba(147, 86, 220, 0.6);
   border-bottom-color: rgba(147, 86, 220, 0.6);
-  -webkit-animation: spinreverse 2s linear infinite;
   animation: spinreverse 2s linear infinite;
 }
 
@@ -273,13 +262,14 @@ h4 {
 }
 .menu__section--list-item .desc {
   width: 80%;
-  margin-right: auto;
 }
 .menu__section--list-item p {
   margin: 0;
   margin-top: 5px;
   font-weight: 400;
   font-size: 14px;
+  display: block;
+  text-overflow: ellipsis;
 }
 .menu__section--list-item .price {
   transition: 0.5s;
@@ -306,12 +296,11 @@ h4 {
   transition: 0.5s;
 }
 .menu__section--list-item:hover .desc {
-  width: 70%;
+  animation: changeWidth 0.5s linear forwards;
 }
 .menu__section--list-item:hover p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
 }
 .menu__section--list-item:hover .price {
   margin-right: 60px;
