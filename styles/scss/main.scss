@@ -1,7 +1,6 @@
 // utils
 @import './utils/variables';
 @import './utils/functions';
-@import 'utils/mixins';
 
 // base
 @import './base/base';
@@ -19,7 +18,3 @@
 
 // pages
 @import './pages/accueil';
-@import './pages/a_la_francaise';
-@import './pages/la_note_enchantee';
-@import './pages/la_palette_du_gout';
-@import './pages/le_delice_des_sens';

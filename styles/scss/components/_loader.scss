@@ -9,8 +9,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	-webkit-animation: hide 1s forwards 3s;
 	animation: hide 0.2s forwards 3s;
 
 	& .loader {
@@ -23,7 +21,6 @@
 		border: 12px solid transparent;
 		border-top-color: $color-primary;
 		border-bottom-color: $color-primary;
-		-webkit-animation: spin 1s linear infinite;
 		animation: spin 1s linear infinite;
 
 		&::after {
@@ -37,9 +34,6 @@
 			border: 12px solid transparent;
 			border-top-color: rgba($color-primary, 0.6);
 			border-bottom-color: rgba($color-primary, 0.6);
-
-			-webkit-animation: spinreverse 2s linear infinite;
-
 			animation: spinreverse 2s linear infinite;
 		}
 	}
