@@ -90,7 +90,6 @@
 
 				& .desc {
 					width: 80%;
-					margin-right: auto;
 				}
 
 				& p {
@@ -98,6 +97,8 @@
 					margin-top: 5px;
 					font-weight: 400;
 					font-size: 14px;
+					display: block;
+					text-overflow: ellipsis;
 				}
 
 				& .price {
@@ -129,13 +130,12 @@
 
 				&:hover {
 					& .desc {
-						width: 70%;
+						animation: changeWidth 0.5s linear forwards;
 					}
 
 					& p {
-						text-overflow: ellipsis;
-						white-space: nowrap;
 						overflow: hidden;
+						white-space: nowrap;
 					}
 
 					& .price {
