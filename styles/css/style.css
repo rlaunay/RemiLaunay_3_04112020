@@ -68,7 +68,7 @@ h4 {
 
 @keyframes spin {
   0% {
-    transorm: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
@@ -76,7 +76,7 @@ h4 {
 }
 @keyframes spinreverse {
   0% {
-    transorm: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
     transform: rotate(-360deg);
@@ -429,7 +429,8 @@ h4 {
 }
 .fonctionnement__step--items:before {
   position: absolute;
-  top: translateY(50%);
+  top: 50%;
+  transform: translateY(-50%);
   left: -10px;
   content: counter(item);
   background: #9356dc;
