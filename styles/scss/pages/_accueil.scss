@@ -175,15 +175,16 @@
 				& .background {
 					z-index: 105;
 					transform: scale(0);
-					background: linear-gradient(
-						to bottom right,
-						$color-secondary 0%,
-						$color-primary 100%
-					);
-					background-clip: text;
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					-moz-text-fill-color: transparent;
+					// background: linear-gradient(
+					// 	to bottom right,
+					// 	$color-secondary 0%,
+					// 	$color-primary 100%
+					// );
+					// background-clip: text;
+					// -webkit-background-clip: text;
+					// -webkit-text-fill-color: transparent;
+					// -moz-text-fill-color: transparent;
+					color: $color-primary;
 				}
 
 				&:hover {

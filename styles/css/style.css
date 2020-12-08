@@ -523,11 +523,7 @@ h4 {
 .restaurant .card__description--icon .background {
   z-index: 105;
   transform: scale(0);
-  background: linear-gradient(to bottom right, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  color: #9356dc;
 }
 .restaurant .card__description--icon:hover i:first-child {
   opacity: 0;
